@@ -1,152 +1,198 @@
-/* =========================================
+/* =========================================================
    PORTFOLIO 2 JAVASCRIPT
    Mobile Navigation + Light/Dark Theme
-   ========================================= */
+   ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navigation = document.querySelector(".main-nav");
-    const themeToggle = document.querySelector(".theme-toggle");
-    const themeIcon = document.querySelector(".theme-icon");
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
 
-    /* =====================================
-       MOBILE NAVIGATION
-       ===================================== */
+const menuToggle =
+    document.getElementById("menuToggle");
 
-    if (menuToggle && navigation) {
+const primaryNavigation =
+    document.getElementById("primary-navigation");
 
-        menuToggle.addEventListener("click", () => {
 
-            const isOpen =
-                navigation.classList.toggle("open");
+if (menuToggle && primaryNavigation) {
+
+    menuToggle.addEventListener("click", () => {
+
+        const isOpen =
+            primaryNavigation.classList.toggle("open");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+
+        menuToggle.textContent =
+            isOpen ? "✕" : "☰";
+
+    });
+
+
+    /* Close menu after clicking a link */
+
+    const navLinks =
+        primaryNavigation.querySelectorAll("a");
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            primaryNavigation.classList.remove("open");
 
             menuToggle.setAttribute(
                 "aria-expanded",
-                String(isOpen)
+                "false"
             );
 
             menuToggle.setAttribute(
                 "aria-label",
-                isOpen
-                    ? "Close navigation menu"
-                    : "Open navigation menu"
+                "Open navigation menu"
             );
 
-        });
-
-        navigation.querySelectorAll("a").forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                navigation.classList.remove("open");
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-
-            });
+            menuToggle.textContent = "☰";
 
         });
 
-        document.addEventListener("keydown", event => {
+    });
 
-            if (event.key === "Escape") {
 
-                navigation.classList.remove("open");
+    /* Close with Escape */
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+    document.addEventListener("keydown", event => {
 
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
+        if (event.key === "Escape") {
 
-                menuToggle.focus();
-            }
+            primaryNavigation.classList.remove("open");
 
-        });
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
-    }
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
 
-    /* =====================================
-       LIGHT / DARK MODE
-       ===================================== */
+            menuToggle.textContent = "☰";
 
-    const savedTheme =
-        localStorage.getItem("portfolio-theme");
+        }
 
-    const systemDark =
-        window.matchMedia &&
-        window.matchMedia(
-            "(prefers-color-scheme: dark)"
-        ).matches;
+    });
 
-    const initialTheme =
-        savedTheme ||
-        (systemDark ? "dark" : "light");
+}
 
-    setTheme(initialTheme);
+
+/* =========================================================
+   LIGHT / DARK MODE
+   ========================================================= */
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+
+const savedTheme =
+    localStorage.getItem("portfolio-theme");
+
+
+const systemPrefersDark =
+    window.matchMedia &&
+    window.matchMedia(
+        "(prefers-color-scheme: dark)"
+    ).matches;
+
+
+function applyTheme(theme) {
+
+    document.documentElement.setAttribute(
+        "data-theme",
+        theme
+    );
+
 
     if (themeToggle) {
 
-        themeToggle.addEventListener("click", () => {
+        if (theme === "dark") {
+
+            themeToggle.textContent = "☀️";
+
+            themeToggle.setAttribute(
+                "aria-label",
+                "Switch to light mode"
+            );
+
+        } else {
+
+            themeToggle.textContent = "🌙";
+
+            themeToggle.setAttribute(
+                "aria-label",
+                "Switch to dark mode"
+            );
+
+        }
+
+    }
+
+}
+
+
+/* Initial theme */
+
+if (savedTheme) {
+
+    applyTheme(savedTheme);
+
+} else {
+
+    applyTheme(
+        systemPrefersDark
+            ? "dark"
+            : "light"
+    );
+
+}
+
+
+/* Theme button */
+
+if (themeToggle) {
+
+    themeToggle.addEventListener(
+        "click",
+        () => {
 
             const currentTheme =
-                document.documentElement
-                    .getAttribute("data-theme");
+                document.documentElement.getAttribute(
+                    "data-theme"
+                );
 
             const newTheme =
                 currentTheme === "dark"
                     ? "light"
                     : "dark";
 
-            setTheme(newTheme);
 
-        });
+            applyTheme(newTheme);
 
-    }
-
-    function setTheme(theme) {
-
-        document.documentElement.setAttribute(
-            "data-theme",
-            theme
-        );
-
-        localStorage.setItem(
-            "portfolio-theme",
-            theme
-        );
-
-        if (themeToggle) {
-
-            const isDark =
-                theme === "dark";
-
-            themeToggle.setAttribute(
-                "aria-label",
-                isDark
-                    ? "Switch to light mode"
-                    : "Switch to dark mode"
+            localStorage.setItem(
+                "portfolio-theme",
+                newTheme
             );
 
-            if (themeIcon) {
-                themeIcon.textContent =
-                    isDark ? "☀" : "☾";
-            }
-
         }
+    );
 
-    }
-
-});
+}
