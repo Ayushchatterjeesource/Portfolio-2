@@ -1,422 +1,608 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Portfolio of Ayush Chatterjee, a B.Tech Electrical Engineering student interested in web development, programming, and innovative engineering solutions.">
-
-    <meta name="keywords"
-          content="Ayush Chatterjee, portfolio, Electrical Engineering, B.Tech, Web Development, JavaScript, HTML, CSS">
-
+    <meta name="description" content="Ayush Chatterjee - Electrical Engineering Student, Developer and Technology Enthusiast. Explore my projects, skills and journey.">
     <meta name="author" content="Ayush Chatterjee">
+    <meta name="theme-color" content="#090711">
 
-    <meta name="theme-color" content="#2563eb">
+    <title>Ayush Chatterjee | Developer Portfolio</title>
 
-    <title>Ayush Chatterjee | Web Development Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<a href="#main-content" class="skip-link">Skip to content</a>
 
+<!-- BACKGROUND EFFECTS -->
+<div class="background-effects" aria-hidden="true">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <div class="grid-overlay"></div>
+</div>
+
+<!-- HEADER -->
 <header class="site-header">
     <div class="container nav-container">
 
-        <a href="index.html" class="brand" aria-label="Ayush Chatterjee Home">
-            <span class="brand-mark">AC</span>
-            <span class="brand-name">Ayush Chatterjee</span>
+        <a href="index.html" class="brand">
+            <span class="brand-mark">AC.</span>
+            <span>AYUSH CHATTERJEE</span>
         </a>
 
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="primary-navigation">
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation">
             ☰
         </button>
 
-        <nav
-            class="primary-nav"
-            id="primary-navigation"
-            aria-label="Primary navigation">
-
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
+        <nav class="primary-nav" id="primary-navigation">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#journey">Journey</a>
             <a href="skills.html">Skills</a>
             <a href="contact.html">Contact</a>
 
-            <button
-                class="theme-toggle"
-                id="themeToggle"
-                type="button"
-                aria-label="Switch to dark mode">
-                🌙
+            <button class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Switch to light mode">
+                ☀️
             </button>
-
         </nav>
+
     </div>
 </header>
 
 
 <main id="main-content">
 
-    <!-- HERO -->
-    <section class="hero section">
+<!-- HERO SECTION -->
+<section class="hero section" id="home">
 
-        <div class="container hero-grid">
+    <div class="container hero-container">
 
-            <div class="hero-content">
+        <div class="hero-content">
 
-                <p class="eyebrow">
-                    B.Tech Student • Electrical Engineering
-                </p>
-
-                <h1>
-                    Hello, I'm
-                    <span>Ayush Chatterjee</span>
-                </h1>
-
-                <p class="hero-description">
-                    I am a first-year B.Tech student with a strong interest
-                    in technology, web development, programming, and
-                    innovative engineering solutions.
-                </p>
-
-                <div class="hero-actions">
-
-                    <a href="projects.html" class="btn btn-primary">
-                        View My Projects
-                    </a>
-
-                    <a href="contact.html" class="btn btn-secondary">
-                        Contact Me
-                    </a>
-
-                </div>
-
+            <div class="availability">
+                <span class="availability-dot"></span>
+                Available for learning & collaboration
             </div>
 
+            <p class="hero-greeting">HELLO, I'M</p>
 
-            <div class="hero-card">
+            <h1>
+                Ayush
+                <span>Chatterjee.</span>
+            </h1>
 
-                <div class="hero-card-top">
-                    <span class="status-dot"></span>
-                    <span>Currently Learning</span>
-                </div>
-
-                <h2>
-                    Building & Learning
-                </h2>
-
-                <p>
-                    Exploring engineering, programming, modern web
-                    technologies, and practical digital solutions.
-                </p>
-
-                <div class="hero-stats">
-
-                    <div>
-                        <strong>4+</strong>
-                        <span>Projects</span>
-                    </div>
-
-                    <div>
-                        <strong>3</strong>
-                        <span>Skill Areas</span>
-                    </div>
-
-                    <div>
-                        <strong>2026</strong>
-                        <span>Portfolio</span>
-                    </div>
-
-                </div>
-
+            <div class="hero-role">
+                <span>Electrical Engineering Student</span>
+                <span class="role-divider">/</span>
+                <span>Web Developer</span>
             </div>
 
-        </div>
+            <p class="hero-description">
+                A first-year B.Tech student passionate about engineering,
+                technology and building digital experiences that solve
+                real-world problems.
+            </p>
 
-    </section>
+            <div class="hero-actions">
 
+                <a href="#projects" class="btn btn-primary">
+                    Explore My Work
+                    <span>↗</span>
+                </a>
 
-    <!-- FEATURES -->
-    <section class="section features-section">
-
-        <div class="container">
-
-            <div class="section-heading">
-                <p class="eyebrow">What I Focus On</p>
-
-                <h2>
-                    Building for the Web
-                </h2>
-
-                <p>
-                    My approach combines engineering knowledge,
-                    programming, accessibility, and modern web design.
-                </p>
-            </div>
-
-
-            <div class="feature-grid">
-
-                <article class="feature-card">
-                    <div class="feature-icon">♿</div>
-
-                    <h3>Accessible</h3>
-
-                    <p>
-                        Creating websites with semantic HTML and
-                        accessibility in mind.
-                    </p>
-                </article>
-
-
-                <article class="feature-card">
-                    <div class="feature-icon">📱</div>
-
-                    <h3>Responsive</h3>
-
-                    <p>
-                        Designing interfaces that work smoothly across
-                        mobile, tablet, and desktop devices.
-                    </p>
-                </article>
-
-
-                <article class="feature-card">
-                    <div class="feature-icon">⚡</div>
-
-                    <h3>Modern</h3>
-
-                    <p>
-                        Using modern CSS, JavaScript, APIs, and cloud
-                        technologies to build practical projects.
-                    </p>
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FEATURED PROJECTS -->
-    <section class="section">
-
-        <div class="container">
-
-            <div class="section-heading section-heading-row">
-
-                <div>
-                    <p class="eyebrow">Selected Work</p>
-
-                    <h2>
-                        Featured Projects
-                    </h2>
-                </div>
-
-                <a href="projects.html" class="text-link">
-                    View All Projects →
+                <a href="contact.html" class="btn btn-outline">
+                    Let's Connect
                 </a>
 
             </div>
 
+            <div class="social-links">
 
-            <div class="project-grid">
+                <a href="https://github.com/ayushchatterjeesource"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub ↗
+                </a>
 
-                <article class="project-card">
+                <span>•</span>
 
-                    <div class="project-number">01</div>
+                <a href="https://www.linkedin.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    LinkedIn ↗
+                </a>
 
-                    <div class="project-type">
-                        Web Application
-                    </div>
+                <span>•</span>
 
-                    <h3>EngiCalc</h3>
-
-                    <p>
-                        A web-based engineering platform featuring
-                        scientific calculations, calculation history,
-                        memory operations, and an engineering formula
-                        library.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                    <a
-                        href="https://ayushchatterjeesource.github.io/EngiCalc/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link">
-                        View Project →
-                    </a>
-
-                </article>
-
-
-                <article class="project-card">
-
-                    <div class="project-number">02</div>
-
-                    <div class="project-type">
-                        Web Platform
-                    </div>
-
-                    <h3>EarthPulse</h3>
-
-                    <p>
-                        An environmental monitoring platform providing
-                        weather, air quality, interactive maps, and
-                        environmental information.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>JavaScript</span>
-                        <span>APIs</span>
-                        <span>Maps</span>
-                    </div>
-
-                    <a
-                        href="https://ayushchatterjeesource.github.io/EarthPulse/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link">
-                        View Project →
-                    </a>
-
-                </article>
-
-
-                <article class="project-card">
-
-                    <div class="project-number">03</div>
-
-                    <div class="project-type">
-                        Web Application
-                    </div>
-
-                    <h3>EngiCalc 2.0</h3>
-
-                    <p>
-                        A comprehensive engineering calculator platform
-                        with scientific, matrix, vector, complex number,
-                        electrical, physics, unit conversion, and
-                        statistics tools.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                    <a
-                        href="https://ayushchatterjeesource.github.io/EngiCalc-2.0/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link">
-                        View Project →
-                    </a>
-
-                </article>
-
-
-                <article class="project-card">
-
-                    <div class="project-number">04</div>
-
-                    <div class="project-type">
-                        Gaming Platform
-                    </div>
-
-                    <h3>SnakeRush</h3>
-
-                    <p>
-                        A modern browser-based arcade game inspired by
-                        the classic Snake experience with responsive
-                        controls and a clean interface.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                    <a
-                        href="https://ayushchatterjeesource.github.io/SnakeRush/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link">
-                        View Project →
-                    </a>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CTA -->
-    <section class="section">
-
-        <div class="container">
-
-            <div class="cta-card">
-
-                <div>
-                    <p class="eyebrow">Let's Connect</p>
-
-                    <h2>
-                        Have an idea or want to collaborate?
-                    </h2>
-
-                    <p>
-                        I'm always interested in learning, building,
-                        and exploring new ideas.
-                    </p>
-                </div>
-
-                <a href="contact.html" class="btn btn-primary">
-                    Get In Touch
+                <a href="mailto:">
+                    Email ↗
                 </a>
 
             </div>
 
         </div>
 
-    </section>
+
+        <!-- PROFILE VISUAL -->
+        <div class="hero-visual">
+
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="profile-card">
+
+                <div class="profile-card-top">
+                    <span>01 / PROFILE</span>
+                    <span class="profile-indicator"></span>
+                </div>
+
+                <div class="profile-avatar">
+                    <span>AC</span>
+                </div>
+
+                <h2>Ayush Chatterjee</h2>
+
+                <p>Engineer in Progress.</p>
+
+                <div class="profile-card-footer">
+                    <span>WEST BENGAL, INDIA</span>
+                    <span>2026</span>
+                </div>
+
+            </div>
+
+            <div class="floating-tag tag-one">
+                ⚡ Engineering
+            </div>
+
+            <div class="floating-tag tag-two">
+                &lt;/&gt; Development
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="scroll-indicator">
+        <span></span>
+        SCROLL TO EXPLORE
+    </div>
+
+</section>
+
+
+<!-- ABOUT SECTION -->
+<section class="section about-section" id="about">
+
+    <div class="container">
+
+        <div class="section-top">
+            <p class="section-label">01 — ABOUT ME</p>
+            <span class="section-line"></span>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-heading">
+                <h2>
+                    Curious mind.
+                    <span>Creative builder.</span>
+                    Future engineer.
+                </h2>
+            </div>
+
+            <div class="about-content">
+
+                <p>
+                    I'm Ayush Chatterjee, a first-year B.Tech student
+                    pursuing Electrical Engineering at Hooghly Engineering
+                    & Technology College.
+                </p>
+
+                <p>
+                    Alongside my engineering studies, I explore web
+                    development, programming and modern technologies.
+                    I enjoy turning ideas into practical digital projects
+                    and continuously improving my technical skills.
+                </p>
+
+                <a href="about.html" class="text-link">
+                    More About Me <span>↗</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="interest-grid">
+
+            <article class="interest-card">
+                <span class="interest-number">01</span>
+                <div class="interest-icon">⚡</div>
+                <h3>Engineering</h3>
+                <p>Exploring electrical systems and engineering concepts.</p>
+            </article>
+
+            <article class="interest-card">
+                <span class="interest-number">02</span>
+                <div class="interest-icon">⌘</div>
+                <h3>Development</h3>
+                <p>Building responsive websites and useful applications.</p>
+            </article>
+
+            <article class="interest-card">
+                <span class="interest-number">03</span>
+                <div class="interest-icon">✦</div>
+                <h3>Innovation</h3>
+                <p>Learning new technologies and exploring creative ideas.</p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS SECTION -->
+<section class="section projects-section" id="projects">
+
+    <div class="container">
+
+        <div class="section-top">
+            <p class="section-label">02 — SELECTED WORK</p>
+            <span class="section-line"></span>
+        </div>
+
+        <div class="section-heading-row">
+
+            <div>
+                <h2 class="section-title">
+                    Things I've
+                    <span>built.</span>
+                </h2>
+
+                <p class="section-description">
+                    A collection of projects driven by curiosity,
+                    creativity and continuous learning.
+                </p>
+            </div>
+
+            <a href="projects.html" class="text-link">
+                All Projects ↗
+            </a>
+
+        </div>
+
+
+        <div class="project-showcase">
+
+            <!-- PROJECT 01 -->
+            <a class="project-door project-one"
+               href="https://ayushchatterjeesource.github.io/EngiCalc/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="door-top">
+                    <span>PROJECT / 01</span>
+                    <span class="door-arrow">↗</span>
+                </div>
+
+                <div class="door-art art-calculator">
+                    <div class="calculator-visual">
+                        <div class="calc-display">ENGI CALC</div>
+                        <div class="calc-buttons">
+                            <span>7</span><span>8</span><span>9</span>
+                            <span>4</span><span>5</span><span>6</span>
+                            <span>1</span><span>2</span><span>3</span>
+                            <span>+</span><span>0</span><span>=</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="door-info">
+                    <div>
+                        <h3>EngiCalc</h3>
+                        <p>Engineering Calculator Platform</p>
+                    </div>
+                    <span class="door-number">01</span>
+                </div>
+
+                <div class="door-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+            </a>
+
+
+            <!-- PROJECT 02 -->
+            <a class="project-door project-two"
+               href="https://ayushchatterjeesource.github.io/EarthPulse/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="door-top">
+                    <span>PROJECT / 02</span>
+                    <span class="door-arrow">↗</span>
+                </div>
+
+                <div class="door-art art-earth">
+                    <div class="earth-circle">
+                        <span>EARTH</span>
+                        <small>01 / PLANET</small>
+                    </div>
+                    <div class="earth-orbit"></div>
+                </div>
+
+                <div class="door-info">
+                    <div>
+                        <h3>EarthPulse</h3>
+                        <p>Environmental Monitoring Platform</p>
+                    </div>
+                    <span class="door-number">02</span>
+                </div>
+
+                <div class="door-tags">
+                    <span>JavaScript</span>
+                    <span>APIs</span>
+                    <span>Maps</span>
+                </div>
+
+            </a>
+
+
+            <!-- PROJECT 03 -->
+            <a class="project-door project-three"
+               href="https://ayushchatterjeesource.github.io/EngiCalc-2.0/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="door-top">
+                    <span>PROJECT / 03</span>
+                    <span class="door-arrow">↗</span>
+                </div>
+
+                <div class="door-art art-engicalc">
+                    <div class="engicalc-symbol">∑</div>
+                    <div class="math-symbol symbol-a">π</div>
+                    <div class="math-symbol symbol-b">√</div>
+                    <div class="math-symbol symbol-c">Ω</div>
+                </div>
+
+                <div class="door-info">
+                    <div>
+                        <h3>EngiCalc 2.0</h3>
+                        <p>Advanced Engineering Toolkit</p>
+                    </div>
+                    <span class="door-number">03</span>
+                </div>
+
+                <div class="door-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+            </a>
+
+
+            <!-- PROJECT 04 -->
+            <a class="project-door project-four"
+               href="https://ayushchatterjeesource.github.io/SnakeRush/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="door-top">
+                    <span>PROJECT / 04</span>
+                    <span class="door-arrow">↗</span>
+                </div>
+
+                <div class="door-art art-snake">
+                    <div class="snake-board">
+                        <span>●</span>
+                        <span>●</span>
+                        <span>●</span>
+                        <span>●</span>
+                        <span class="snake-food">◆</span>
+                    </div>
+                    <p>GAME ON!</p>
+                </div>
+
+                <div class="door-info">
+                    <div>
+                        <h3>SnakeRush</h3>
+                        <p>Browser-Based Arcade Game</p>
+                    </div>
+                    <span class="door-number">04</span>
+                </div>
+
+                <div class="door-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS SECTION -->
+<section class="section skills-section" id="skills">
+
+    <div class="container">
+
+        <div class="section-top">
+            <p class="section-label">03 — MY TOOLKIT</p>
+            <span class="section-line"></span>
+        </div>
+
+        <h2 class="section-title">
+            Technologies I
+            <span>work with.</span>
+        </h2>
+
+        <p class="section-description">
+            Tools and technologies I use while learning and building projects.
+        </p>
+
+        <div class="technology-cloud">
+
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>Firebase</span>
+            <span>Cloudflare Workers</span>
+            <span>Cloudflare D1</span>
+            <span>GitHub</span>
+            <span>Figma</span>
+            <span>VS Code</span>
+            <span>Responsive Design</span>
+
+        </div>
+
+        <a href="skills.html" class="text-link">
+            Explore My Skills ↗
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- JOURNEY / TIMELINE -->
+<section class="section journey-section" id="journey">
+
+    <div class="container">
+
+        <div class="section-top">
+            <p class="section-label">04 — MY JOURNEY</p>
+            <span class="section-line"></span>
+        </div>
+
+        <h2 class="section-title">
+            Learning.
+            <span>Building. Growing.</span>
+        </h2>
+
+        <p class="section-description">
+            Every project is another step forward.
+        </p>
+
+
+        <div class="timeline">
+
+            <article class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2026 — PRESENT</div>
+                <div class="timeline-content">
+                    <h3>B.Tech in Electrical Engineering</h3>
+                    <p>
+                        Beginning my engineering journey at Hooghly
+                        Engineering & Technology College.
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2026</div>
+                <div class="timeline-content">
+                    <h3>Web Development & Projects</h3>
+                    <p>
+                        Building practical web applications and exploring
+                        modern web technologies.
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">THE FUTURE</div>
+                <div class="timeline-content">
+                    <h3>More Ideas. More Innovation.</h3>
+                    <p>
+                        Continuing to learn, experiment and develop
+                        meaningful engineering and technology projects.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT CTA -->
+<section class="section contact-section">
+
+    <div class="container">
+
+        <div class="contact-banner">
+
+            <p class="section-label">05 — LET'S CONNECT</p>
+
+            <h2>
+                Have an idea?
+                <span>Let's build something.</span>
+            </h2>
+
+            <p>
+                I'm always open to learning, collaboration and exploring
+                interesting ideas.
+            </p>
+
+            <a href="contact.html" class="btn btn-primary">
+                Get In Touch <span>↗</span>
+            </a>
+
+            <div class="contact-decoration">AC.</div>
+
+        </div>
+
+    </div>
+
+</section>
 
 </main>
 
 
+<!-- FOOTER -->
 <footer class="site-footer">
 
     <div class="container footer-content">
 
-        <p>
-            This website is made by Ayush Chatterjee
-        </p>
+        <a href="#home" class="footer-brand">AC.</a>
 
-        <p>
-            © 2026. All rights reserved.
-        </p>
+        <p>This website is made by Ayush Chatterjee</p>
+
+        <p>© 2026. All rights reserved.</p>
 
     </div>
 
